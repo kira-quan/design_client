@@ -2,6 +2,7 @@ package app.timeline;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Timeline {
@@ -21,6 +22,20 @@ public class Timeline {
 	}
 	
 	//----------------------- Getters and Setters ------------------------------
+	
+	public List<String> getPhaseNames(){
+		
+		Iterator<Phase> it = phases.iterator();
+		List<String> names = new ArrayList<String>(phases.size());
+		
+		while(it.hasNext()){
+			names.add(it.next().getName());
+		}
+		
+		System.out.println(names.toString());
+		
+		return names;
+	}
 	
 	public List<Phase> getPhases() {
 		return phases;

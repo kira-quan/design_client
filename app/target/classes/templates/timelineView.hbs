@@ -23,9 +23,9 @@
 		<div id="timeline" class="container-fluid">
 		 <h3>Timeline</h3>
 			<ol>
-				<li> {{event-1}} </li>
-				<li> {{event-2}} </li>
-				<li> {{event-3}} </li>
+				{{#each events}}
+					<li>{{this}}</li>
+				{{/each}}
 			</ol> 
 			
 		</div>

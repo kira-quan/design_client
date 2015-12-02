@@ -15,13 +15,17 @@ public class TimelineView {
 	}
 
 	public void displayTimeline() {
-		Map<String, String> map = new HashMap<String, String>();
-        map.put("first-name", "Sam");
-        map.put("event-1", "Initial Client Meeting");
-        map.put("event-2", "Creative Brief");
-        map.put("event-3", "Rough Draft Designs");
+		
+		// TODO: Change in order to pull data from Timeline 
+		Map<String, String> timelineViewMap = new HashMap<String, String>();
+        timelineViewMap.put("first-name", "Sam");
+        timelineViewMap.put("event-1", "Initial Client Meeting");
+        timelineViewMap.put("event-2", "Creative Brief");
+        timelineViewMap.put("event-3", "Rough Draft Designs");
 
         // hello.hbs file is in resources/templates directory
-        get("/timeline", (rq, rs) -> new ModelAndView(map, "timelineView.hbs"), new HandlebarsTemplateEngine());
+        get("/timeline", 
+        		(rq, rs) -> new ModelAndView(timelineViewMap, "timelineView.hbs"), 
+        		new HandlebarsTemplateEngine());
     }
 }

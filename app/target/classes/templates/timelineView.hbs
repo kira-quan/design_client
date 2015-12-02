@@ -1,20 +1,37 @@
 <html>
 
-<head>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Design Client Timeline</title>
+    
+    <!-- Latest compiled and minified CSS for Twitter Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<body>
-  <div id="userInformation">
-  	<h1>Hello, {{first-name}}</h1>
-  </div>
-	<div id="timeline">
-		<ol>
-			<li> {{event-1}} </li>
-			<li> {{event-2}} </li>
-			<li> {{event-3}} </li>
-		</ol> 
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+ 
+	</head>
+
+	<body>
+	  <div id="userInformation" class="container-fluid">
+	  	<h1>Hello, {{first-name}}</h1>
+	  </div>
+		<div id="timeline" class="container-fluid">
+		 <h3>Timeline</h3>
+			<ol>
+				<li> {{event-1}} </li>
+				<li> {{event-2}} </li>
+				<li> {{event-3}} </li>
+			</ol> 
+			
+		</div>
 		
-	</div>
-</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</body>
 
 </html>

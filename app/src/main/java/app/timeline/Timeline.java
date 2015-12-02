@@ -32,8 +32,6 @@ public class Timeline {
 			names.add(it.next().getName());
 		}
 		
-		System.out.println(names.toString());
-		
 		return names;
 	}
 	
@@ -60,8 +58,6 @@ public class Timeline {
 	}
 	public void setActivePhase(Phase activePhase) {
 		this.activePhase = activePhase;
-	}
-	
-	
+	}	
 
 }

@@ -21,16 +21,13 @@ public class TimelineView {
 		
 		List<String> events = timeline.getPhaseNames();
 		
-		// TODO: Change in order to pull data from Timeline 
-		Map<String, List<String>> timelineViewMap = new HashMap<String, List<String>>();
-		List<String> user = new ArrayList<String>(1);
+		// Using Object for this map because Handlebars expects different
+		// object types for a single template (e.g. String and Array)
+		Map<String, Object> timelineViewMap = new HashMap<String,Object>();
 		
-		user.add("Sam");
-		
-        timelineViewMap.put("first-name", user);
+        timelineViewMap.put("first-name", "Sam");
         timelineViewMap.put("events", events);
 
-        // hello.hbs file is in resources/templates directory
         get("/timeline", 
         		(rq, rs) -> new ModelAndView(timelineViewMap, "timelineView.hbs"), 
         		new HandlebarsTemplateEngine());
